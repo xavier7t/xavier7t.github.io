@@ -28,7 +28,29 @@
         /* .contact-type {
             font-weight:bold;
         } */
+        /* adding the background color for mouseover and mouseleave for table rows */
+        .tr-mouseover {
+          background-color: whitesmoke;
+        }
+        .tr-mouseleave {
+          background-color: white;
+        }
     </style>
+    <script>
+      window.onload = function(){
+        //obtain all the tr elements
+        var trs = document.getElementsByTagName("tr");
+        //iterate trs
+        for (var i = 0; i < trs.length; i++){
+          trs[i].onmouseover = function() {
+            this.className = "tr-mouseover";
+          }
+          trs[i].onmouseout = function() {
+            this.className = "tr-mouseleave";
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
