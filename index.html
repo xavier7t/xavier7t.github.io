@@ -64,6 +64,11 @@
         font-size: 7rem;
         text-shadow: 2px 5px #707070;
       }
+      .about_area .h4_about_name {
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-shadow: 2px 1px #707070;
+      }
 
       .about_area .h5_about_title {
         text-transform: uppercase;
@@ -215,7 +220,7 @@
                             <li><a class="dropdown-item" href="mailto:yuxuanli.work@icloud.com"><i class="far fa-envelope"></i>&nbsp;&nbsp;&nbsp;Email</a></li>
                             <li><a class="dropdown-item" href="sms://+16477947777"><i class="fas fa-sms"></i>&nbsp;&nbsp;&nbsp;SMS Text</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="https://www.paypal.com/paypalme/YXLWpaypal"><i class="fab fa-paypal"></i>&nbsp;&nbsp;&nbsp;<span>Buy me a ☕️ ❤️</span></a></li>
+                            <li><a class="dropdown-item" href="https://www.paypal.com/paypalme/YXLWpaypal" target="_blank"><i class="fab fa-paypal"></i>&nbsp;&nbsp;&nbsp;<span>Buy me a ☕️ ❤️</span></a></li>
                           </ul>
                         </li>
                         <li class="nav-item">
@@ -244,12 +249,15 @@
           <div class="about_area_title">
             <h3 class="h3_about_agreeting">Hello, I’m</h3>
             <h1 class="h1_about_name">Xavier</h1>
-            <h5 class="h5_about_title">Tech Consultant</h5>
-            <h5 class="h5_about_title">Full-Stack Developer</h5>
+            <h4 class="h4_about_name">/ Yuxuan Li. A Coding Lover❤️</h4>
+            <h5 class="h5_about_title"></h5>
+            <h5 class="h5_about_title">Tech Consultant, Java/Python Full Stack</h5>
           </div>
           <div class="about_area_buttons">
-            <button type="button" class="btn btn-outline-primary">book me</button>
-            <button type="button" class="btn btn-outline-secondary">visit my blog</button>
+            <!-- <button type="button" class="btn btn-outline-primary">check my skills</button> -->
+            <a class="btn btn-outline-primary" href="#skills_area" role="button">check my skills</a>
+            <a class="btn btn-outline-secondary" href="https://myblogx.notion.site/fbf8490aab1a4d1296a84008fb4ccfe0?v=3c5ce2e69b254902b8eb4bbdb1104074" target="_blank" role="button">visit my blog</a>
+            <!-- <button type="button" class="btn btn-outline-secondary">visit my blog</button> -->
           </div>
         </div>
       </div>
@@ -265,7 +273,8 @@
             <p class="about_para"></p>
           </div>
           <div class="about_area_buttons">
-            <button type="button" class="btn btn-outline-success">View Portfolio</button>
+            <!-- <button type="button" class="btn btn-outline-success">View Portfolio</button> -->
+            <a class="btn btn-outline-success" href="#portfolio_area" role="button">View Portfolio</a>
           </div>
         </div>
         <div class="col-lg-6 col-sm-12">
@@ -277,7 +286,7 @@
   <!-- end about_area -->
 
   <!-- start skills_area -->
-  <section class="skills_area">
+  <section class="skills_area" id="skills_area">
     <div class="container">
       <div class="row">
         <h2 class="skills_title" id="Skills">My Skills</h2>
@@ -351,7 +360,7 @@
   <!-- end skills_area -->
 
   <!-- start portfolio_area -->
-  <section class="portfolio_area">
+  <section class="portfolio_area" id="portfolio_area">
     <div class="container">
       <div class="row portfolio_table">
         <table class="table center">
