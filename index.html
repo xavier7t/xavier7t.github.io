@@ -16,18 +16,15 @@
     <!-- link Roboto Mono from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <style>
-        /* default font */
+    /* default font */
         body {
             /* font-family: 'Roboto Mono', cursive; */
             font-family: Arial, Helvetica, sans-serif;
         }
-    </style>
-    <!-- custom style sheet -->
-    <style>
-      /* start navbar */
+    /* start navbar */
       .navbar_area {
-        padding-left: 15rem;
-        padding-right: 10rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
       }
       .img_brand_logo {
           height: 5rem;
@@ -46,7 +43,7 @@
       }
       /* end navbar */
 
-      /* start about area */
+    /* start about area */
       .about_area {
         text-align: center;
       }
@@ -86,17 +83,21 @@
         text-transform: uppercase;
         font-size: 3rem;
         display: block;
-        letter-spacing: 2.5rem;
-        margin-left:5.9rem;
+        letter-spacing: 1.4rem;
+        /* margin-left:5.9rem; */
         font-weight: bolder;
       }
       .about_area .row {
         margin-top: 5rem;
       }
-      /* end about area */
+    /* end about area */
 
-      /* start skills area */
-
+    /* start skills area */
+    .skills_area {
+        text-align: center;
+        padding-left: 7rem;
+        padding-right: 8rem;
+    }
       .skills_area h2{
         text-transform: uppercase;
         font-size: 3rem;
@@ -104,13 +105,13 @@
         text-align: center;
         margin-top: 4.9rem;
       }
-      
+
       .skills_area .skills_card{
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
         padding-top: 2.5rem;
         transition: .49s;
-        width: 300px;
+        /* width: 300px; */
         height: 400px;
         text-align: center;
       }
@@ -131,14 +132,15 @@
 
       .skills_area .skills_card .skills_logo .logo_h5c3js {
         margin-top: 2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 4.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
+        height:.7rem;
       }
       /* end skills area */
 
-      /* start portfolio area */
-      .portfolio_area .portfolio_carousel .carousel-inner img{
+        /* start portfolio area */
+            .portfolio_area .portfolio_carousel .carousel-inner img{
         filter: brightness(40%);
       }
 
@@ -156,12 +158,12 @@
         font-size: 3rem;
         font-weight: bolder;
         text-align: center;
-        margin-top: 1.9rem;
+        margin-top: 5rem;
         margin-bottom: 1.9rem;
       }
 
       .portfolio_area .table_icon {
-        height: 3em;
+        height: 2em;
       }
 
       .portfolio_area .portfolio_table {
@@ -169,8 +171,9 @@
       }
       /* end portfolio area */
 
-      /* start footer */
-      .footer_area .copyright {
+
+    /* start footer */
+            .footer_area .copyright {
         text-align: center;
       }
       .footer_area p{
@@ -189,63 +192,67 @@
     </style>
 </head>
 <body>
-  <!-- start navbar_area -->
-  <section class="navbar_area">
-      <div class="container-fluid">
-          <div class="row">
-              <nav class="navbar navbar-expand-lg navbar-light">
-                  <div class="container-fluid">
-                    <a class="navbar-brand" href="https://xavier7t.com"><img src="./res/img/Xavier7T-sm.png" alt="x7t_logo" class="img img-fluid img_brand_logo"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#About">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Connect
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="https://github.com/xavier7t" target="_blank"><i class="fab fa-github"></i>&nbsp;&nbsp;&nbsp;Github</a></li>
-                            <li><a class="dropdown-item" href="https://www.linkedin.com/in/xavier7/" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;&nbsp;&nbsp;LinkedIn</a></li>
-                            <li><a class="dropdown-item" href="https://twitter.com/Xavier_T7" target="_blank"><i class="fab fa-twitter-square"></i>&nbsp;&nbsp;&nbsp;Twitter</a></li>
-                            <li><a class="dropdown-item" href="https://myblogx.notion.site/fbf8490aab1a4d1296a84008fb4ccfe0?v=3c5ce2e69b254902b8eb4bbdb1104074" target="_blank"><img src="./res/img/notion_logo.png" alt="i_notion_logo" height="16px"/>&nbsp;&nbsp;&nbsp;Notion</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="mailto:yuxuanli.work@icloud.com"><i class="far fa-envelope"></i>&nbsp;&nbsp;&nbsp;Email</a></li>
-                            <li><a class="dropdown-item" href="sms://+16477947777"><i class="fas fa-sms"></i>&nbsp;&nbsp;&nbsp;SMS Text</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="https://www.paypal.com/paypalme/YXLWpaypal" target="_blank"><i class="fab fa-paypal"></i>&nbsp;&nbsp;&nbsp;<span>Buy me a ☕️ ❤️</span></a></li>
-                          </ul>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#Skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#Portfolio">Portfolio</a>
-                        </li>
-                      </ul>
+    <!-- start navbar_area -->
+    <section class="navbar_area">
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <a class="navbar-brand" href="https://xavier7t.com"><img src="./res/img/Xavier7T-sm.png" alt="x7t_logo" class="img img-fluid img_brand_logo"></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#About">About</a>
+                                  </li>
+                                  <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Connect
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="https://github.com/xavier7t" target="_blank"><i class="fab fa-github"></i>&nbsp;&nbsp;&nbsp;Github</a></li>
+                                      <li><a class="dropdown-item" href="https://www.linkedin.com/in/xavier7/" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;&nbsp;&nbsp;LinkedIn</a></li>
+                                      <li><a class="dropdown-item" href="https://twitter.com/Xavier_T7" target="_blank"><i class="fab fa-twitter-square"></i>&nbsp;&nbsp;&nbsp;Twitter</a></li>
+                                      <li><a class="dropdown-item" href="https://myblogx.notion.site/fbf8490aab1a4d1296a84008fb4ccfe0?v=3c5ce2e69b254902b8eb4bbdb1104074" target="_blank"><img src="./res/img/notion_logo.png" alt="i_notion_logo" height="16px"/>&nbsp;&nbsp;&nbsp;Notion</a></li>
+                                      <li><hr class="dropdown-divider"></li>
+                                      <li><a class="dropdown-item" href="mailto:yuxuanli.work@icloud.com"><i class="far fa-envelope"></i>&nbsp;&nbsp;&nbsp;Email</a></li>
+                                      <li><a class="dropdown-item" href="sms://+16477947777"><i class="fas fa-sms"></i>&nbsp;&nbsp;&nbsp;SMS Text</a></li>
+                                      <li><hr class="dropdown-divider"></li>
+                                      <li><a class="dropdown-item" href="https://www.paypal.com/paypalme/YXLWpaypal" target="_blank"><i class="fab fa-paypal"></i>&nbsp;&nbsp;&nbsp;<span>Buy me a ☕️ ❤️</span></a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#Skills">Skills</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#Portfolio">Portfolio</a>
+                                  </li>
+                                </ul>
+                              </div>
+                        </div>
                     </div>
-                  </div>
-                </nav>
-          </div>
-      </div>
-  </section>
-  <!-- end navbar_area -->
+                  </nav>
+            </div>
+        </div>
+    </section>
+    <!-- end navbar_area -->
 
-  <!-- start about_area -->
+      <!-- start about_area -->
   <section class="about_area">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <img src="./res/img/Memoji-Work.jpeg" alt="memoji_work" class="memoji_work" id="About">
         </div>
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <div class="about_area_title">
             <h3 class="h3_about_agreeting">Hello, I’m</h3>
             <h1 class="h1_about_name">Xavier</h1>
@@ -262,7 +269,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <div class="about_area_spans">
             <span class="about_area_span span_letme">let me</span>
             <span class="about_area_span span_intro">introduce</span>
@@ -277,7 +284,7 @@
             <a class="btn btn-outline-success" href="#portfolio_area" role="button">View Portfolio</a>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <img src="./res/img/Memoji-Greetings.jpeg" alt="memoji_greeting" class="memoji_greeting">
         </div>
       </div>
@@ -285,85 +292,86 @@
   </section>
   <!-- end about_area -->
 
-  <!-- start skills_area -->
-  <section class="skills_area" id="skills_area">
-    <div class="container">
-      <div class="row">
-        <h2 class="skills_title" id="Skills">My Skills</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="skills_card">
-            <div class="skills_logo">
-              <i class="fab fa-java fa-7x logo_java"></i>
+    <!-- start skills_area -->
+    <section class="skills_area" id="skills_area">
+        <div class="container">
+          <div class="row">
+            <h2 class="skills_title" id="Skills">My Skills</h2>
+          </div>
+          <div class="row">
+            <!-- <div class="col-lg-3 col-sm-6 col-xs-12"> -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+              <div class="skills_card">
+                <div class="skills_logo">
+                  <i class="fab fa-java fa-7x logo_java"></i>
+                </div>
+                <div class="skills_title">
+                  <h3 class="skills_title_h3">Java Development</h3>
+                </div>
+                <div class="skills_desc">
+                  <p class="skills_desc_p">
+                    In-depth understanding frequently used Java SE & EE modules; Experienced in both front end (JavaWeb) and backend (SQL and JDBC).
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="skills_title">
-              <h3 class="skills_title_h3">Java Development</h3>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+              <div class="skills_card">
+                <div class="skills_logo">
+                  <i class="fab fa-html5 fa-4x logo_h5c3js"></i>
+                  <i class="fab fa-css3-alt fa-4x logo_h5c3js"></i>
+                  <i class="fab fa-js-square fa-4x logo_h5c3js"></i>
+                </div>
+                <div class="skills_title">
+                  <h3 class="skills_title_h3">Web Development</h3>
+                </div>
+                <div class="skills_desc">
+                  <p class="skills_desc_p">
+                    Design and style H5 pages with CSS3 and JS enhancements; Also familiar with Bootstrap and its grid system (used on this page.)
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="skills_desc">
-              <p class="skills_desc_p">
-                In-depth understanding frequently used Java SE & EE modules; Experienced in both front end (JavaWeb) and backend (SQL and JDBC).
-              </p>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+              <div class="skills_card">
+                <div class="skills_logo">
+                  <i class="fab fa-python fa-7x logo_python"></i>
+                </div>
+                <div class="skills_title">
+                  <h3 class="skills_title_h3">Python Development</h3>
+                </div>
+                <div class="skills_desc">
+                  <p class="skills_desc_p">
+                    Write Python scripts to create web scraper, process-automating scripts with profound experience in Selenium and Beautiful Soup.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+              <div class="skills_card">
+                <div class="skills_logo">
+                  <i class="fas fa-server fa-7x logo_server"></i>
+                </div>
+                <div class="skills_title">
+                  <h3 class="skills_title_h3">ERP System Consulting</h3>
+                </div>
+                <div class="skills_desc">
+                  <p class="skills_desc_p">
+                    Design and/or test RICEFWs for ERP & CRM systems such as SAP & Salesforce with big four consulting project experiences.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="skills_card">
-            <div class="skills_logo">
-              <i class="fab fa-html5 fa-4x logo_h5c3js"></i>
-              <i class="fab fa-css3-alt fa-4x logo_h5c3js"></i>
-              <i class="fab fa-js-square fa-4x logo_h5c3js"></i>
-            </div>
-            <div class="skills_title">
-              <h3 class="skills_title_h3">Web Development</h3>
-            </div>
-            <div class="skills_desc">
-              <p class="skills_desc_p">
-                Design and style H5 pages with CSS3 and JS enhancements; Also familiar with Bootstrap and its grid system (used on this page.)
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="skills_card">
-            <div class="skills_logo">
-              <i class="fab fa-python fa-7x logo_python"></i>
-            </div>
-            <div class="skills_title">
-              <h3 class="skills_title_h3">Python Development</h3>
-            </div>
-            <div class="skills_desc">
-              <p class="skills_desc_p">
-                Write Python scripts to create web scraper, process-automating scripts with profound experience in Selenium and Beautiful Soup.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="skills_card">
-            <div class="skills_logo">
-              <i class="fas fa-server fa-7x logo_server"></i>
-            </div>
-            <div class="skills_title">
-              <h3 class="skills_title_h3">ERP System Consulting</h3>
-            </div>
-            <div class="skills_desc">
-              <p class="skills_desc_p">
-                Design and/or test RICEFWs for ERP & CRM systems such as SAP & Salesforce with big four consulting project experiences.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end skills_area -->
+      </section>
+      <!-- end skills_area -->
 
-  <!-- start portfolio_area -->
+        <!-- start portfolio_area -->
   <section class="portfolio_area" id="portfolio_area">
     <div class="container">
       <div class="row portfolio_table">
-        <table class="table center">
+        <table class="table center table-responsive">
           <h2 id="Portfolio" class="portfolio_table_title">Portfolio List</h2>
           <thead>
             <tr class="tr-mouseleave">
@@ -396,7 +404,7 @@
             <tr>
               <td><img src="./res/img/dlogo.jpg" alt="Deloitte_logo" class="table_icon"> + <img src="./res/img/clogo.png" alt="Costco_logo" class="table_icon"></td>
               <td>Retail</td>
-              <td>SAP CRM - Membership Management Enhancement</td>
+              <td>SAP CRM - Membership & Refund Management</td>
               <!-- <td><a href="#">View on Notion</a></td> -->
               <td>SAP ABAP, WebUI Configurator, SAP BI</td>
               <td>2018</td>
@@ -462,22 +470,22 @@
   </section>
   <!-- end portfolio_area -->
 
-  <!-- start footer_area -->
-  <section class="footer_area">
-    <footer class="container-fluid">
-      <div class="row copyright">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-2"></div>
-        <div class="col-lg-2"><img src="./res/img/Xavier7T-sm.png" alt="x7t_logo"></div>
-        <div class="col-lg-2"><img src="./res/img/Memoji-Seeyou.jpeg" alt="Memoji-Seeyou" id="Memoji-Seeyou"></div>
-        <div class="col-lg-2"></div>
-        <div class="col-lg-2"></div>
-      </div>
-      <div class="row copyright">
-        <p>Copyright © 2022 Xavier7T. All rights reserved.</p>
-      </div>
-    </footer>
-  </section>
-  <!-- end footer_area -->
+    <!-- start footer_area -->
+    <section class="footer_area">
+        <footer class="container-fluid">
+          <div class="row copyright">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2"><img src="./res/img/Xavier7T-sm.png" alt="x7t_logo"></div>
+            <div class="col-lg-2"><img src="./res/img/Memoji-Seeyou.jpeg" alt="Memoji-Seeyou" id="Memoji-Seeyou"></div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2"></div>
+          </div>
+          <div class="row copyright">
+            <p>Copyright © 2022 Xavier7T. All rights reserved.</p>
+          </div>
+        </footer>
+      </section>
+      <!-- end footer_area -->
 </body>
 </html>
