@@ -12,7 +12,7 @@ console.log(context);
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // (without this step, an element with both H&W as 100 wont look like a square)
-
+const gravity = .21; //3.5 acceleration of gravity
 //2.1 Define the character class
 class Character {
     constructor() {
@@ -23,14 +23,43 @@ class Character {
         }
         this.width = 30;
         this.height = 30;
+        //3 - Gravity for the character Start
+        //3.1 - add a velocity field
+        this.velocity = {
+            x:0,
+            y:0
+        }
     }
     draw() {
         context.fillStyle = 'red';
         context.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
+    //3.2 - create a new function to enable vertical gravity by adding velocity to the position-y
+    update() {
+        this.draw();
+        this.position.y += this.velocity.y;
+        if (this.position.y + this.height + this.velocity.y <= canvas.height) {
+            this.velocity.y += gravity;
+        } else {
+            this.velocity.y = 0;
+        }
+    }
 }
 
 //2.2 Implement the character class
 const character = new Character();
-character.draw();
+// character.draw();
+//3.4 call the update function instead of draw to enable vertical movement
+animate(); //3.3 function defined at the bottom
+//3 - Gravity for the character Start End
+
 // 2- Character Creation End
+
+//3.3 define a function for gravity animation
+function animate() {
+    requestAnimationFrame(animate);
+    console.log("test function animate()");
+    //make the square to drop instead of drawing a vertical line
+    context.clearRect(0,0, canvas.width, canvas.height);
+    character.update();
+}
