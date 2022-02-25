@@ -3,7 +3,7 @@
 const canvas = document.querySelector('canvas');
 // 1.2 access context
 const context = canvas.getContext('2d');
-console.log(context);
+// console.log(context);
 // 1 - Project Setup End
 
 // 2- Character Creation Start
@@ -43,16 +43,10 @@ class Character {
         } else {
             this.velocity.y = 0;
         }
+        //4.2.0 enable horizontal movement
+        this.position.x += this.velocity.x;
     }
 }
-
-//2.2 Implement the character class
-const character = new Character();
-// character.draw();
-//3.4 call the update function instead of draw to enable vertical movement
-animate(); //3.3 function defined at the bottom
-//3 - Gravity for the character Start End
-// 2- Character Creation End
 
 
 //4.2.0 Create a const object keys to define the status of direction keys
@@ -62,8 +56,16 @@ const keys = {
     },
     left:{
         pressed: false
-    },
+    }
 }
+//2.2 Implement the character class
+const character = new Character();
+// character.draw();
+//3.4 call the update function instead of draw to enable vertical movement
+// animate(); //3.3 function defined at the bottom
+//3 - Gravity for the character Start End
+// 2- Character Creation End
+
 //3.3 define a function for gravity animation
 function animate() {
     requestAnimationFrame(animate);
@@ -71,9 +73,21 @@ function animate() {
     //make the square to drop instead of drawing a vertical line
     context.clearRect(0,0, canvas.width, canvas.height);
     character.update();
+    //4.2.3 change x velocity when pressed A/D keys
+    // if (keys.right.pressed) {
+    //     character.velocity.x = 5;
+    // } else if (keys.left.pressed) {
+    //     character.velocity.x = -5;
+    // } else {
+    //     character.velocity.x = 0;
+    // }
+    if (keys.right.pressed) {
+        character.velocity.x = 5
+    } else if (keys.left.pressed) {
+        character.velocity.x = -5
+    } else character.velocity.x *= 0.9
 }
-
-
+animate();
 //4- movement for the character - Start
 //4.1 Add the event listener to capture key presses
 // window.addEventListener('keydown', (event) => {
@@ -84,46 +98,46 @@ function animate() {
 addEventListener('keydown', ({ keyCode }) => {
     // console.log(keyCode); //console log will show the key codes of keys we pressed
 
-    //4.2 use switch statements to cope with key down cases (key presses)
+    //4.2.1 use switch statements to cope with key down cases (key presses)
     switch (keyCode) {
         case 65:
-            console.log('left');
+            // console.log('left');
             keys.left.pressed = true;
             break;
         case 83:
-            console.log('down');
+            // console.log('down');
             break;
         case 68:
-            console.log('right');
+            // console.log('right');
             keys.right.pressed = true;
             break;
         case 87:
-            console.log('up');
+            // console.log('up');
             character.velocity.y -= 10; //going up for 10 units
             break;
     }
-    console.log(keys.left.pressed);
-    console.log(keys.right.pressed);
+    // console.log(keys.left.pressed);
+    // console.log(keys.right.pressed);
 })
-//4.2 use another listen with switch statements to capture and cope with key up cases (key released)
+//4.2.2 use another listen with switch statements to capture and cope with key up cases (key released)
 addEventListener('keyup', ({ keyCode }) => {
     switch (keyCode) {
         case 65:
-            console.log('left');
+            // console.log('left');
             keys.left.pressed = false;
             break;
         case 83:
-            console.log('down');
+            // console.log('down');
             break;
         case 68:
-            console.log('right');
+            // console.log('right');
             keys.right.pressed = false;
             break;
         case 87:
-            console.log('up');
+            // console.log('up');
             character.velocity.y -= 10; //going up for 10 units
             break;
     }
-    console.log(keys.left.pressed);
-    console.log(keys.right.pressed);
+    // console.log(keys.left.pressed);
+    // console.log(keys.right.pressed);
 })
