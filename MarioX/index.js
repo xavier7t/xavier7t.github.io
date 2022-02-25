@@ -47,7 +47,22 @@ class Character {
         this.position.x += this.velocity.x;
     }
 }
-
+//5 - Platform
+//5.1 create a platform class
+class Platform {
+    constructor() {
+        this.position = {
+            x:210,
+            y:140
+        }
+        this.width = 210;
+        this.height = 21;
+    }
+    draw() {
+        context.fillStyle = 'blue';
+        context.fillRect(this.position.x, this.position.y, this.width, this.height)
+    }
+}
 
 //4.2.0 Create a const object keys to define the status of direction keys
 const keys = {
@@ -61,6 +76,10 @@ const keys = {
 //2.2 Implement the character class
 const character = new Character();
 // character.draw();
+
+//5.2 create a new platform
+const platform = new Platform();
+
 //3.4 call the update function instead of draw to enable vertical movement
 // animate(); //3.3 function defined at the bottom
 //3 - Gravity for the character Start End
@@ -73,6 +92,8 @@ function animate() {
     //make the square to drop instead of drawing a vertical line
     context.clearRect(0,0, canvas.width, canvas.height);
     character.update();
+    //5.3 draw the platform created in 5.2
+    platform.draw();
     //4.2.3 change x velocity when pressed A/D keys
     // if (keys.right.pressed) {
     //     character.velocity.x = 5;
@@ -86,7 +107,15 @@ function animate() {
     } else if (keys.left.pressed) {
         character.velocity.x = -5
     } else character.velocity.x *= 0.9
+
+    //5.4 determine if the character is above a platform
+    if ((character.position.y + character.height <= platform.position.y) && (character.position.y)){
+        character.velocity.y = 0;
+    }
 }
+////////////////////////////40:00////////////////////////////
+////////////////////////////40:00////////////////////////////
+////////////////////////////40:00////////////////////////////
 animate();
 //4- movement for the character - Start
 //4.1 Add the event listener to capture key presses
