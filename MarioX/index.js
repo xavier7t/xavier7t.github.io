@@ -109,13 +109,14 @@ function animate() {
     } else character.velocity.x *= 0.9
 
     //5.4 determine if the character is above a platform
-    if ((character.position.y + character.height <= platform.position.y) && (character.position.y)){
+    if ((character.position.y + character.height <= platform.position.y)
+        && (character.position.y + character.height + character.velocity.y >= platform.position.y) //when the character is above the platform
+        &&(character.position.x + character.width >= platform.position.x)
+        &&(character.position.x <= platform.position.x + platform.width)){ //AND when the character is not on the right or left side of the platform
         character.velocity.y = 0;
     }
 }
-////////////////////////////40:00////////////////////////////
-////////////////////////////40:00////////////////////////////
-////////////////////////////40:00////////////////////////////
+
 animate();
 //4- movement for the character - Start
 //4.1 Add the event listener to capture key presses
